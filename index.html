@@ -87,7 +87,8 @@
   </section>
 
   <script>
-    const submission = () => {
+    const submission = (e) => {
+      e.preventDefault();
       console.log('Yo');
       document.querySelector('#submit_message').innerText = "Thank you! We will contact you shortly."
     }
