@@ -75,23 +75,24 @@
   <section id="contact">
   <h2>Contact</h2>
   <h3 id="submit_message"></h3>
-  <form id="form">
+  <form id="form" action='#' method="post" name="form">
     <div class="form-group">
     <label id="email-label" for="email">Email</label>
       <input type="email" id="email" name="email" placeholder="Enter your email" required>
     </div>
     <div class="form-group">
-    <input type="submit" id="submit" onClick=submission()></input>
+    <input type="submit" id="submit"></input>
     </div>
   </form>
   </section>
 
   <script>
-    const submission = (e) => {
+    const form = document.getElementById('form');
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
       console.log('Yo');
       document.querySelector('#submit_message').innerText = "Thank you! We will contact you shortly."
-    }
+    });
   </script>
 </body>
 </html>
