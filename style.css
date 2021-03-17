@@ -4,6 +4,14 @@
   font-family: 'Raleway', sans-serif;
 }
 
+hr {
+  margin: 30px auto 30px auto;
+  color: grey;
+  width: 50%;
+  display: block;
+  text-align: center;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -39,14 +47,15 @@ body {
 }
 
 @media (min-width: 501px) {
- #video {
-  width: 560px;
-}
+  #video {
+    width: 800px;
+  }
 }
 
 @media (max-width: 500px) {
-  #video { 
-    width: 400px;
+  #video {
+    width: 90vw;
+    height: 300px;
   }
 }
 
@@ -54,6 +63,7 @@ input {
   font-size: 18px;
   display: block;
   margin: auto;
+  color: black;
   margin-bottom: 10px;
 }
 
@@ -121,11 +131,16 @@ a {
     flex-direction: column;
   }
   .product {
-    max-width: 300px;
+    max-width: 90vw;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 10px;
   }
+}
+
+#testimonials {
+  max-width: 90vw;
+  margin: auto;
 }
 
 #testimonials p {
@@ -134,6 +149,23 @@ a {
   font-size: 20px;
 }
 
-input[type="email"] {
+#email-label {
+  display: inline;
+}
+
+input[type='email'] {
+  display: inline;
+  color: black;
+  margin: 10px;
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+form {
+  margin: 30px;
+}
+
+#submit_message {
   color: red;
 }

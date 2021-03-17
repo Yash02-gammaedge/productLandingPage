@@ -2,12 +2,11 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Product Landing Page</title>
+  <title>Fakery</title>
   <link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
-<!-- partial:index.partial.html -->
+
 <div id="page-wrapper">
 <header id="header">
   <div id="logo">
@@ -20,8 +19,10 @@
   </nav>
 </header>
 <body>
-  <h2>Making the best custom, fake products since 1599 . . .</h2>
-    <iframe id="video" height="315" src="https://www.youtube.com/embed/XxC3DCemXIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <h2>Making the best custom fake products since 1599 . . .</h2>
+    <iframe id="video" height="500" width="800" src="https://www.youtube.com/embed/XxC3DCemXIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr>
 
   <h2>Pricing</h2>
   <section id="pricing">
@@ -59,6 +60,8 @@
         <button class="btn">Select</button>
       </div>
     </section>
+
+  <hr>
   
   <section id="testimonials">
   <h2>Testimonials</h2>
@@ -67,21 +70,27 @@
   <p>"They were totally excellent. The best. Never had better." - Donald Trump</p>
   </section>
   
+<hr>
+
   <section id="contact">
   <h2>Contact</h2>
-  <form id="form" action="https://www.freecodecamp.com/email-submit">
+  <h3 id="submit_message"></h3>
+  <form id="form">
     <div class="form-group">
     <label id="email-label" for="email">Email</label>
       <input type="email" id="email" name="email" placeholder="Enter your email" required>
     </div>
     <div class="form-group">
-    <input type="submit" id="submit"></input>
+    <input type="submit" id="submit" onClick=submission()></input>
     </div>
   </form>
   </section>
-</body>
-</div>
-<!-- partial -->
-  
+
+  <script>
+    const submission = () => {
+      console.log('Yo');
+      document.querySelector('#submit_message').innerText = "Thank you! We will contact you shortly."
+    }
+  </script>
 </body>
 </html>
